@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: nginx-deployment
+ name: nginx-deployment-kustomize
 spec:
  replicas: 5
  selector:
@@ -14,7 +14,7 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: quay.io/gauravkumar9130/nginx
+     image: nginx
      ports:
       - containerPort: 80
 
